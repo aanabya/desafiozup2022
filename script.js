@@ -28,21 +28,28 @@ pegarPersonagemChamarApiAlterarDadosImagem = (idImagem) => {
         });
 }
 
+traduzirCondicao = (data) => {
+    if(data.status == 'unknown'){
+        return 'Não sabemos';
+    }else if(data.status == 'Alive'){
+        return 'Sim';
+    }else {
+        return 'Não. Está morto';
+    }
+}
 alterarDadosImagem = (data, idImagem) => {
-
     const imagem = document.querySelector('#img' + idImagem);
     const detalhesContainer = document.querySelector('#detalhes-container' + idImagem);
     const nomeDoPersonagem = detalhesContainer.querySelector('#nome');
     const especie = detalhesContainer.querySelector('#especie');
-    const condicao = detalhesContainer.querySelector('#status');
+    const condicao = detalhesContainer.querySelector('#status');   
     imagem.src = data.image;
     imagem.alt = data.name; 
     imagem.title = data.name;   
     nomeDoPersonagem.innerHTML = data.name;
     especie.innerHTML = data.species;
-    condicao.innerHTML = data.status;
+    condicao.innerHTML = traduzirCondicao(data);
 
 }
 
 botao.onclick = atualizarTela;
-
