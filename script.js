@@ -11,3 +11,17 @@ chamarApi = (numeroAleatorio) => {
         }
     });
 }
+atualizarTela = () => {
+    pegarPersonagemChamarApiAlterarDadosImagem(1);
+    pegarPersonagemChamarApiAlterarDadosImagem(2);
+    pegarPersonagemChamarApiAlterarDadosImagem(3);
+}
+
+pegarPersonagemChamarApiAlterarDadosImagem = (idImagem) => {
+    let numeroAleatorio = gerarValorAletorio();
+
+    chamarApi(numeroAleatorio)
+        .then(
+            (respostadaApi) => respostadaApi.json())
+        });
+}
