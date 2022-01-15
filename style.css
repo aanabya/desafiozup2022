@@ -41,7 +41,7 @@ button {
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 500;
     justify-content: center;
     line-height: 18px;
@@ -55,4 +55,12 @@ button {
     font-weight: bold;
     list-style-type: none;
     width: 100%;
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span {
+    font-family: Arial, Helvetica, sans-serif;
 }
