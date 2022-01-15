@@ -25,3 +25,17 @@ pegarPersonagemChamarApiAlterarDadosImagem = (idImagem) => {
             (respostadaApi) => respostadaApi.json())
         });
 }
+
+alterarDadosImagem = (data, idImagem) => {
+    let imagem = document.querySelector('#img' + idImagem);
+    let detalhesContainer = document.querySelector('#detalhes-container' + idImagem);
+    let nomeDoPersonagem = detalhesContainer.querySelector('#nome');
+    let especie = detalhesContainer.querySelector('#especie');
+    let condicao = detalhesContainer.querySelector('#status');
+    imagem.src = data.image;
+    imagem.alt = data.name;
+    nomeDoPersonagem.innerHTML = data.name;
+    especie.innerHTML = data.species;
+    condicao.innerHTML = data.status;
+
+}
