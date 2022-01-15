@@ -30,17 +30,19 @@ pegarPersonagemChamarApiAlterarDadosImagem = (idImagem) => {
 
 alterarDadosImagem = (data, idImagem) => {
 
-    let imagem = document.querySelector('#img' + idImagem);
-    let detalhesContainer = document.querySelector('#detalhes-container' + idImagem);
-    let nomeDoPersonagem = detalhesContainer.querySelector('#nome');
-    let especie = detalhesContainer.querySelector('#especie');
-    let condicao = detalhesContainer.querySelector('#status');
+    const imagem = document.querySelector('#img' + idImagem);
+    const detalhesContainer = document.querySelector('#detalhes-container' + idImagem);
+    const nomeDoPersonagem = detalhesContainer.querySelector('#nome');
+    const especie = detalhesContainer.querySelector('#especie');
+    const condicao = detalhesContainer.querySelector('#status');
     imagem.src = data.image;
-    imagem.alt = data.name;
+    imagem.alt = data.name; 
+    imagem.title = data.name;   
     nomeDoPersonagem.innerHTML = data.name;
     especie.innerHTML = data.species;
     condicao.innerHTML = data.status;
 
 }
 
-botao.onlick = atualizarTela;
+botao.onclick = atualizarTela;
+

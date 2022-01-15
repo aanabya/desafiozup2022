@@ -16,14 +16,14 @@ main {
     display: flex;
     height: 100vh;
     justify-content: center;
-    margin-left: -140px;
     position: relative;
 }
 
-main div.box {
-    width: 150px;
+main div.box {    
     display: inline-block;
-    padding: 100px;
+    margin-left: 5px;
+    padding: 30px;
+    width: 320px;
 }
 
 main > section img {
@@ -63,4 +63,5 @@ li {
 
 span {
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
