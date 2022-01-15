@@ -22,11 +22,14 @@ pegarPersonagemChamarApiAlterarDadosImagem = (idImagem) => {
 
     chamarApi(numeroAleatorio)
         .then(
-            (respostadaApi) => respostadaApi.json())
+            (respostaDaApi) => respostaDaApi.json())
+            .then((data) => {
+                alterarDadosImagem(data,idImagem);
         });
 }
 
 alterarDadosImagem = (data, idImagem) => {
+
     let imagem = document.querySelector('#img' + idImagem);
     let detalhesContainer = document.querySelector('#detalhes-container' + idImagem);
     let nomeDoPersonagem = detalhesContainer.querySelector('#nome');
@@ -39,3 +42,5 @@ alterarDadosImagem = (data, idImagem) => {
     condicao.innerHTML = data.status;
 
 }
+
+botao.onlick = atualizarTela;
